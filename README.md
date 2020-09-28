@@ -3,5 +3,4 @@
 
 ### Martin Plávka, ďakujem za pomoc pri random shuffle
 
-Projekt som robil v čase keď som GIT neovládal, preto je projekt bez commit a branch
-~~hej~~
+Projekt som robil v čase keď som GIT neovládal, preto je projekt bez commit a branch.
