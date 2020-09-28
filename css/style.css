@@ -1,0 +1,209 @@
+@keyframes openCard {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(180deg); } }
+@keyframes closeCard {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(-180deg); } }
+@keyframes opacity {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.closeCard {
+  animation: closeCard 1s linear; }
+
+.openCard {
+  animation: openCard 1s linear; }
+
+.opacity {
+  animation: opacity 1s linear; }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+/* general */
+html {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* clearfix */
+.group:before, .group:after {
+  content: " ";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle, #c9ffd8 5%, #0092aa 23%, #00bdff 47%, #34738a 87%);
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  background-attachment: fixed; }
+
+#black-screen {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #ee7652e7, #e73c7e9d, #23a5d5f5, #23d5abad);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  z-index: 10; }
+
+#start-button:hover {
+  background: radial-gradient(circle, #fcb045 39%, #fd1d1d 91%);
+  transform: scale(1.05, 1.05);
+  transition: .5s; }
+
+.main-wrapper {
+  transform: translate(-50%, -50%);
+  width: 42%;
+  flex-direction: row;
+  position: relative;
+  flex-wrap: wrap;
+  left: 50%;
+  top: 377px;
+  display: flex; }
+
+.squares {
+  text-align: center;
+  background-color: #2f5c5c;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative; }
+
+.squares:hover {
+  background-color: #3b7474;
+  transition: .5s; }
+
+.pair-1, .pair-2, .pair-3, .pair-4, .pair-5, .pair-6, .pair-7, .pair-0 {
+  background-position: center;
+  background-size: cover; }
+
+@media screen and (min-width: 500px) {
+  .main-wrapper {
+    width: 91%;
+    transform: translate(-50%, -50%);
+    flex-direction: row;
+    position: relative;
+    flex-wrap: wrap;
+    left: 50%;
+    top: 360px;
+    display: flex; }
+
+  .squares {
+    margin: 4px;
+    padding: 52px; }
+
+  #start-button {
+    background: radial-gradient(circle, #fd1d1d 39%, #fcb045 91%);
+    width: 260px;
+    height: 13.8%;
+    font-family: 'Freckle Face', cursive;
+    font-size: 2.5em;
+    text-align: center;
+    position: relative;
+    top: 167px;
+    left: -5px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border: 3px solid black;
+    border-radius: 12px; } }
+@media screen and (min-width: 539px) {
+  .main-wrapper {
+    width: 85%;
+    left: 50.5%; } }
+@media screen and (min-width: 600px) {
+  .main-wrapper {
+    width: 78%; }
+
+  #start-button {
+    left: -15px; } }
+@media screen and (min-width: 640px) {
+  .main-wrapper {
+    width: 73%; }
+
+  #start-button {
+    left: -7px; } }
+@media screen and (min-width: 680px) {
+  .main-wrapper {
+    width: 69%; }
+
+  #start-button {
+    left: -10px; } }
+@media screen and (min-width: 750px) {
+  .main-wrapper {
+    width: 81%; }
+
+  .squares {
+    margin: 7px;
+    padding: 64px; }
+
+  #start-button {
+    left: -16px; } }
+@media screen and (min-width: 860px) {
+  .main-wrapper {
+    width: 72%; }
+
+  #start-button {
+    left: -22px; } }
+@media screen and (min-width: 900px) {
+  .main-wrapper {
+    width: 67%; } }
+@media screen and (min-width: 980px) {
+  .main-wrapper {
+    width: 70%; }
+
+  .squares {
+    margin: 9px;
+    padding: 71px; } }
+@media screen and (min-width: 1085px) {
+  .main-wrapper {
+    width: 64%; } }
+@media screen and (min-width: 1128px) {
+  .main-wrapper {
+    width: 64%; } }
+@media screen and (min-width: 1185px) {
+  .main-wrapper {
+    width: 62%; }
+
+  .squares {
+    padding: 74px; }
+
+  #start-button {
+    left: -66px; } }
+@media screen and (min-width: 1275px) {
+  .main-wrapper {
+    width: 58%; } }
+@media screen and (min-width: 1375px) {
+  .main-wrapper {
+    width: 53%; } }
+@media screen and (min-width: 1565px) {
+  .main-wrapper {
+    width: 47%; } }
+@media screen and (min-width: 1765px) {
+  .main-wrapper {
+    width: 45%; }
+
+  #start-button {
+    left: 5px; } }
+@media screen and (min-width: 1840px) {
+  .main-wrapper {
+    width: 43%; }
+
+  #start-button {
+    left: 5px; } }
+
+/*# sourceMappingURL=style.css.map */

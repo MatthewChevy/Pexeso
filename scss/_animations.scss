@@ -1,0 +1,33 @@
+
+@keyframes openCard {
+        0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(180deg); }
+}
+
+@keyframes closeCard {
+        0% { transform: rotateY(0deg); }
+      100% { transform: rotateY(-180deg); }
+}
+
+@keyframes opacity{
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.closeCard { animation: closeCard 1s linear; }
+.openCard { animation: openCard 1s linear; }
+.opacity{ animation: opacity 1s linear };
+
+
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
