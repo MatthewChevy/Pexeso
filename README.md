@@ -1,6 +1,5 @@
 # Pexeso
-## Jeden z mojich prvých projektov
+## My second project
+### Martin Plávka, thank you for your help with random shuffle
 
-### Martin Plávka, ďakujem za pomoc pri random shuffle
-
-Projekt som robil v čase keď som GIT neovládal, preto je projekt bez commit a branch.
+I did this project when I wasn't familiar with GIT, this is the reason why is project without commit and branch.
