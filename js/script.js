@@ -72,9 +72,6 @@ square.addEventListener( 'click', function(){ // after click do
                     }, 500);
                 };           
             }; addPicture( pictureURL );   
-
- 
- 
     });             
 }); 
 
@@ -91,15 +88,14 @@ function shuffle() {
             if (randArr[j] === randomNumber ){
                 pairCount++;
             }
-        }
-        
+        }   
         if(pairCount < 2){ //ak tam je menej ako 2x  tak ho priradi ak nie prebehne to znova
             randArr[i] = randomNumber;
         } else {
             i--;
         }  
     }
-    
+
     for (i =1; i < 17; i++){
         var obj = document.getElementsByClassName("item-" + i);
         obj[0].className += ' pair-' + randArr[i];  
