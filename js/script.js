@@ -20,18 +20,18 @@ square.addEventListener( 'click', function(){ // after click do
     
     openCard.push( this ); // after click push element in to the array
     
-        const that = this, // simply way like save 'this' to variable
-              pictureURL = picForPexeso[ that.classList[2].substr( 5 ) ]; // from squares take last number of class ( .pair-0/7 ) and this number use like index for get value in array
+        const pictureURL = picForPexeso[ this.classList[2].substr( 5 ) ]; // from squares take last number of class ( .pair-0/7 ) and this number use like index for get value in array
               
-              if( that.classList.contains('openCard')){ // Close and Open card
+              if( this.classList.contains('openCard')){ // Close and Open card
                 setTimeout(
-                    that.classList.add('closeCard'), // if card is turned/open, after click close it
-                    that.classList.remove('openCard'),
+                    this.classList.add('closeCard'), // if card is turned/open, after click close it
+                    this.classList.remove('openCard'),
                     500);
             } else {
                 setTimeout(  
-                    that.classList.remove('closeCard'),
-                    that.classList.add('openCard'), // turn card after click
+                    this.classList.remove('closeCard'),
+                    this.classList.add('openCard'), // turn card after click
+                   /* console.log( this, this ),*/
                         500);
                     }
 
@@ -62,13 +62,16 @@ square.addEventListener( 'click', function(){ // after click do
             }; autoCloseRemove( openCard );
 
 
-            function addPicture( pictureURL ){ 
 
-                // if backgroundImage value is equal zero or none and if at the same time 'that' contains class opencard 
-                if ( that.style.backgroundImage == 0 || 'none' && that.classList.contains('openCard') ){ 
+            let self = this;
+
+             function addPicture( pictureURL ){ 
+
+                // if backgroundImage value is equal zero or none and if at the same time 'this' contains class opencard 
+                if ( self.style.backgroundImage == 0 || 'none' && this.classList.contains('openCard') ){ 
 
                     setTimeout( function () {  
-                        that.style.backgroundImage = pictureURL; // add backgroundImage
+                        self.style.backgroundImage = pictureURL; // add backgroundImage
                     }, 500);
                 };           
             }; addPicture( pictureURL );   
@@ -109,19 +112,19 @@ function shuffle() {
 squares.forEach( square => { // foreach item from array 'squares' save like 'square'
     square.addEventListener( 'click', function(){ // after click do
         
-        const that = this, // simply way like save 'this' to variable
-              pictureURL = picForPexeso[ that.classList[1].substr( 5 ) ]; // from squares take last number of class ( .pair-0/7 ) and this number use like index for get value in array
+        const this = this, // simply way like save 'this' to variable
+              pictureURL = picForPexeso[ this.classList[1].substr( 5 ) ]; // from squares take last number of class ( .pair-0/7 ) and this number use like index for get value in array
               
               
-              if( that.classList.contains('openCard')){ // Close and Open card
+              if( this.classList.contains('openCard')){ // Close and Open card
                 setTimeout(
-                    that.classList.add('closeCard'), // if card is turned/open, after click close it
-                    that.classList.remove('openCard'),
+                    this.classList.add('closeCard'), // if card is turned/open, after click close it
+                    this.classList.remove('openCard'),
                     500);
             } else {
                 setTimeout(  
-                    that.classList.remove('closeCard'),
-                    that.classList.add('openCard'), // turn card after click
+                    this.classList.remove('closeCard'),
+                    this.classList.add('openCard'), // turn card after click
                         500);
                     }
                     
@@ -147,11 +150,11 @@ squares.forEach( square => { // foreach item from array 'squares' save like 'squ
 
             function addPicture( pictureURL ){ 
 
-                // if backgroundImage value is equal zero or none and if at the same time 'that' contains class opencard 
-                if ( that.style.backgroundImage == 0 || 'none' && that.classList.contains('openCard') ){ 
+                // if backgroundImage value is equal zero or none and if at the same time 'this' contains class opencard 
+                if ( this.style.backgroundImage == 0 || 'none' && this.classList.contains('openCard') ){ 
 
                     setTimeout( function () {  
-                        that.style.backgroundImage = pictureURL; // add backgroundImage
+                        this.style.backgroundImage = pictureURL; // add backgroundImage
                     }, 500);
                 };           
             };    
