@@ -8,15 +8,14 @@ const squares = [].slice.call( document.getElementsByClassName('squares') ), // 
 let openCard = [];
 
 shuffle();
-startButton.addEventListener( 'click', function(){
-    
+startButton.addEventListener( 'click', () => {  
     blackScreen.style.display = 'none';
     startButton.style.display = 'none';
     
 });
        
 squares.forEach( square => { // foreach item from array 'squares' save like 'square'
-square.addEventListener( 'click', function(){ // after click do
+square.addEventListener( 'click', () => { // after click do
     
     openCard.push( this ); // after click push element in to the array
     
